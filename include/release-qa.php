@@ -71,29 +71,42 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.3.22' => [
+    '8.3.24' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '22 May 2025',
-            'baseurl'    => 'https://downloads.php.net/',
+            'number'     => 1,
+            'sha256_bz2' => '4b0952b0e6e40aa29bfc166382b963b1d23d5ae7fd9891a8f84bdb6269dd4750',
+            'sha256_gz'  => '76599db84ad4034f0b318405a59170c61e463eecfdde0aeb9c6fd00a14360d06',
+            'sha256_xz'  => '58ac41b231d3d0c7e44f2f6826511c3bed0a09490da4708dac80c7cefc020533',
+            'date'       => '17 Jul 2025',
+            'baseurl'    => 'https://downloads.php.net/~jakub/',
         ],
     ],
 
-    '8.4.8' => [
+    '8.4.11' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
-            'number'     => 0,
-            'sha256_bz2' => '',
-            'sha256_gz'  => '',
-            'sha256_xz'  => '',
-            'date'       => '22 May 2025',
-            'baseurl'    => 'https://downloads.php.net/',
+            'number'     => 1,
+            'sha256_bz2' => '641fcd2da3c066a0799cf469ee8491d98502cf5877be5cf07b3d648ac74f83f8',
+            'sha256_gz'  => 'c19c5daa94c8171c5ceb04214212cc7cc5c284804de0f60e2a78d3aec5e65900',
+            'sha256_xz'  => '7568a75d1f220fe224dc56b17f9252bdc366ad9afcc35d8785d58cd1222f6e1f',
+            'date'       => '17 Jul 2025',
+            'baseurl'    => 'https://downloads.php.net/~calvinb/',
+        ],
+    ],
+
+    '8.5.0' => [
+        'active'  => true,
+        'release' => [
+            'type'       => 'alpha',
+            'number'     => 2,
+            'sha256_bz2' => '3394e354cb8f7757bba10d666504d7b1b6e74fd2ed623cd6a1580408c85e5fcb',
+            'sha256_gz'  => '60868a9cb73726c247226b048bfa3727a4a6a72ced283e5351e16d84abf9398e',
+            'sha256_xz'  => '94d41a8168988e5faa744780ad870ee50dd5175b474477cb701fddddf1a696a1',
+            'date'       => '17 Jul 2025',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
         ],
     ],
 ];
