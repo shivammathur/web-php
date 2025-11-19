@@ -96,7 +96,11 @@ $os = [
     ],
 ];
 
+$windowsLatestVersion = '8.5';
+$nonWindowsLatestVersion = '8.4';
+
 $versions = [
+    '8.5' => 'version 8.5',
     '8.4' => 'version 8.4',
     '8.3' => 'version 8.3',
     '8.2' => 'version 8.2',
@@ -143,6 +147,12 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
 } elseif (!array_key_exists('osvariant', $options) || !array_key_exists($options['osvariant'], $os[$options['os']]['variants'])) {
     $options['osvariant'] = array_key_first($os[$options['os']]['variants']);
 }
+
+if ($options['os'] === 'windows' && $options['version'] === 'default') {
+    $options['version'] = $windowsLatestVersion;
+} elseif ($options['os'] !== 'windows' && $options['version'] === '8.5') {
+    $options['version'] = $nonWindowsLatestVersion;
+}
 ?>
 <h1>Downloads &amp; Installation Instructions</h1>
 
@@ -180,6 +190,7 @@ if ($auto_osvariant && (!array_key_exists('osvariant', $options) || !array_key_e
         and use
         <select id="version" name="version">
             <?php foreach ($versions as $value => $version) { ?>
+                <?php if ($value === '8.5' && $options['os'] !== 'windows') { continue; } ?>
                 <?= option($value, $version, [
                     'selected' => array_key_exists('version', $options) && $options['version'] === $value,
                 ]); ?>

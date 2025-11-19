@@ -1,6 +1,8 @@
 <?php
 $file = 'unknown';
-$latestPhpVersion = '8.4';
+$windowsLatestPhpVersion = '8.5';
+$nonWindowsLatestPhpVersion = '8.4';
+$latestPhpVersion = $nonWindowsLatestPhpVersion;
 
 if (!isset($options)) {
     $options = [
@@ -18,6 +20,15 @@ if ($options['os'] === 'windows') {
     if ($options['osvariant'] === 'windows-wsl-ubuntu') {
         $options['os'] = 'linux';
         $options['osvariant'] = 'linux-ubuntu';
+    }
+}
+$currentOs = $options['os'] ?? '';
+if ($currentOs === 'windows') {
+    $latestPhpVersion = $windowsLatestPhpVersion;
+} else {
+    $latestPhpVersion = $nonWindowsLatestPhpVersion;
+    if (($options['version'] ?? '') === '8.5') {
+        $options['version'] = $nonWindowsLatestPhpVersion;
     }
 }
 if ($options['os'] === 'osx' || $options['os'] === 'windows') {
