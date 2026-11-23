@@ -70,7 +70,8 @@ echo <<<'HTML'
 <strong>Thread Safety</strong>
 <p>NTS builds are for single-threaded use cases, typically PHP running via FastCGI or on the CLI. TS builds support multithreaded SAPIs and are intended for PHP loaded as a web server module. So, if you want to use PHP as FastCGI with IIS, use the Non-Thread Safe (NTS) builds of PHP, or if you want to use the Apache HTTP Server, use the Thread Safe (TS) builds of PHP.</p>
 <strong>Visual Studio Versions</strong>
-<p>The builds below are built using Visual Studio 2019 (VS16) or Visual Studio 2022 (VS17) compiler. They require the Visual C++ Redistributable for Visual Studio 2015-2022 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">x64</a> or <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">x86</a> installed.</p>
+<p>PHP 8.6 builds use Visual Studio 2026 (VS18). Earlier PHP versions offered here use Visual Studio 2019 (VS16) or Visual Studio 2022 (VS17).</p>
+<p>Install the latest Visual C++ v14 Redistributable matching your PHP build: <a href="https://aka.ms/vc14/vc_redist.x64.exe">x64</a> or <a href="https://aka.ms/vc14/vc_redist.x86.exe">x86</a>.</p>
 HTML;
 
 echo '<h3>PHP ' . htmlspecialchars($version) . ' (' . $fullVersion . ')</h3>';
